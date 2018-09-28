@@ -22,7 +22,6 @@
         <td><%= event.name %></td>
         <td><%= event.short_description %></td>
         <td><%= link_to(event.category.name, category_path(event.category)) unless event.category.nil? %></td>
-        <td><%= event.try(:category).try(:name) %></td>
         <td><%= event.price %></td>
         <td><%= event.date %></td>
         <td><%= event.location %></td>
