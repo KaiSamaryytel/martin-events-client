@@ -2,3 +2,9 @@
 <p>Find me in app/views/home/index.html.erb</p>
 <h1>Welcome!</h1>
 <p>We sell best event tickets!</p>
+
+
+<% @events.each do | event | %>
+<%= event.name %> - <%= event.location %> - <%= event.price %> <br> 
+
+<% end %>
