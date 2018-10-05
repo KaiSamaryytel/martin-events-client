@@ -1,7 +1,7 @@
 class SendMail
  def send
    from = SendGrid::Email.new(email: 'test@example.com')
-   to = SendGrid::Email.new(email: 'kai.koppel@khk.ee')
+   to = SendGrid::Email.new(email: 'test@example.com')
    subject = 'Sending with SendGrid is Fun'
    content = SendGrid::Content.new(type: 'text/plain', value: 'and easy to do anywhere, even with Ruby')
    mail = SendGrid::Mail.new(from, subject, to, content)
