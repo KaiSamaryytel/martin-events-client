@@ -61,11 +61,28 @@ This project is licensed under the MIT License
 * Hat tip to anyone whose code was used
 * Inspiration
 
-## CREATE SECRETFILE.ENV
+## Making database (and inserting data):
+```
+rake db:migrate
+rake db:seed
+```
+Make an enviroment file:
+```
+touch secret.env
+```
+and add the following and replace with your API keys:
 
-Sendgrif api key https://sendgrid.com/
-Recaptcha api key https://www.google.com/recaptcha/admin
+*Sendgrif api key https://sendgrid.com/
+*Recaptcha api key https://www.google.com/recaptcha/admin
+*Under 'Adding reCAPTCHA to your site' you should see 'Keys', specifically your 'Site Key' and 'Secret 
+Key', copy and paste both keys into their respective configuration fields under 
+```
+*export RECAPTCHA_SITE_KEY='***'
+*export RECAPTCHA_SECRET_KEY='***'
 *before rails s run source secretfile.env
-export SENDGRID_API_KEY='***'
-export RECAPTCHA_SITE_KEY='***'
-export RECAPTCHA_SECRET_KEY='***'
+```
+Running the enviroment file in same terminal page:
+```
+source secret.env
+rails s
+```
