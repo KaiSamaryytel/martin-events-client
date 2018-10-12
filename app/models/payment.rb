@@ -15,12 +15,12 @@ class Payment
   end
   def body
     {
-      "amount": 120,
+      "amount": 30000,
       "sender_account": Time.now,
-      "recipient_name": "Martin Kangur",
+      "recipient_name": "Kai Koppel",
       "recipient_account": "test2 account",
       "description": Event.first.name,
-      "token": "2899cfab862af6858bb8c2eb174da0fe"
+      "token": "0a673e1b13cba09ed6f8dc3ef8c36f6b"
     }
   end
 end
