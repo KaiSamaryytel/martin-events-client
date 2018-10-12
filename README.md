@@ -55,8 +55,7 @@ and add the following and replace with your API keys:
 ```
 *export SENDGRID_API_KEY='***'
 *export RECAPTCHA_SITE_KEY='***'
-*export RECAPTCHA_SECRET_KEY='***'V
-*before rails s run source secretfile.env
+*export RECAPTCHA_SECRET_KEY='***'
 ```
 Running the enviroment file in same terminal page:
 ```
