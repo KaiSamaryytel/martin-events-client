@@ -13,6 +13,18 @@ You'll need:
 
 *a computer*
 
+## Obtaining API keys:
+
+This application uses sendgrid for sending emails and reCAPTCHA for validating forms.
+
+Make an account and get your API key at:
+
+https://sendgrid.com/
+
+And get your reCaptcha API key:
+
+obtain a reCAPTCHA API key. Note: Use localhost or 127.0.0.1 in domain if using localhost:3000.
+
 ### Installing
 
 A step by step series of examples that tell you how to get a development up and running
@@ -25,16 +37,30 @@ Opening the repo root folder:
 ```
 cd martin-events-client
 ```
-Important install (dont' ask why):
+Important install:
 ```
 bundle install
 ```
 Making database:
 ```
 rake db:migrate
+rake db:seed
 ```
-Starting rails server to see your result in a browser:
+Make an enviroment file:
 ```
+touch secret.env
+```
+and add the following and replace with your API keys:
+
+```
+*export SENDGRID_API_KEY='***'
+*export RECAPTCHA_SITE_KEY='***'
+*export RECAPTCHA_SECRET_KEY='***'V
+*before rails s run source secretfile.env
+```
+Running the enviroment file in same terminal page:
+```
+source secret.env
 rails s
 ```
 
@@ -60,29 +86,3 @@ This project is licensed under the MIT License
 
 * Hat tip to anyone whose code was used
 * Inspiration
-
-## Making database (and inserting data):
-```
-rake db:migrate
-rake db:seed
-```
-Make an enviroment file:
-```
-touch secret.env
-```
-and add the following and replace with your API keys:
-
-*Sendgrif api key https://sendgrid.com/
-*Recaptcha api key https://www.google.com/recaptcha/admin
-*Under 'Adding reCAPTCHA to your site' you should see 'Keys', specifically your 'Site Key' and 'Secret 
-Key', copy and paste both keys into their respective configuration fields under 
-```
-*export RECAPTCHA_SITE_KEY='***'
-*export RECAPTCHA_SECRET_KEY='***'
-*before rails s run source secretfile.env
-```
-Running the enviroment file in same terminal page:
-```
-source secret.env
-rails s
-```
