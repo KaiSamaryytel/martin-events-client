@@ -49,4 +49,4 @@ Event.create({
 })
 
 
-User.create({email: 'm2@m.ee', password: '123123'}).confirm
+User.create({email: 'kai.koppel@khk.ee', password: '123123'}).confirm

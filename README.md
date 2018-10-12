@@ -61,4 +61,11 @@ This project is licensed under the MIT License
 * Hat tip to anyone whose code was used
 * Inspiration
 
+## CREATE SECRETFILE.ENV
 
+Sendgrif api key https://sendgrid.com/
+Recaptcha api key https://www.google.com/recaptcha/admin
+*before rails s run source secretfile.env
+export SENDGRID_API_KEY='***'
+export RECAPTCHA_SITE_KEY='***'
+export RECAPTCHA_SECRET_KEY='***'
